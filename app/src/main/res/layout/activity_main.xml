@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/profileInfoTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_info"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guidStart"
+        app:layout_constraintRight_toRightOf="@id/guidEnd"
+        app:layout_constraintTop_toTopOf="@id/guidTop" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailEditTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/std_margin"
+        android:backgroundTint="@color/black"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@id/profileInfoTxtView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userNameEditTxt"
+        style="@style/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/std_margin"
+        android:hint="@string/username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTxt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/firstNameEditTxt"
+        style="@style/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/std_margin"
+        android:hint="@string/firstname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@id/userNameEditTxt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/lastNameEditTxt"
+        style="@style/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/std_margin"
+        android:hint="@string/lastname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@id/firstNameEditTxt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ageEditTxt"
+        style="@style/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/std_margin"
+        android:hint="@string/age"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@id/lastNameEditTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="@id/guidStart"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditTxt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearBtn"
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="@id/guidEnd"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
